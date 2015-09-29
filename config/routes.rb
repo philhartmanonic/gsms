@@ -1,12 +1,13 @@
 Gsms::Application.routes.draw do
+  get "sms/create"
   resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
+  root 'posts#index'
+  match 'sms' => 'sms#create', via: :post
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

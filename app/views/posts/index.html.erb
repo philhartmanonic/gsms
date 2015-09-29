@@ -1,10 +1,10 @@
-<h1>Listing posts</h1>
+<div>
+<h1>Welcome to GSMS by Galen</h1>
+
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Text</th>
       <th></th>
       <th></th>
       <th></th>
@@ -12,6 +12,16 @@
   </thead>
 
   <tbody>
+    <%= form_tag('/sms', :method => 'post') do %>
+      Send a text message, straight from your browser!<br>
+      Enter who you'd like to text, and your message!<br>
+      <p>Recipient <br>
+      <%= text_field_tag('smsTo') %><br>
+      Message<br>
+      <%= text_field_tag('note') %><br>
+      <br><%= submit_tag("Have at it!") %>
+      </p>
+    <% end %>
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
@@ -26,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+

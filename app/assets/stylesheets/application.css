@@ -11,3 +11,15 @@
  *= require_self
  *= require_tree .
  */
+body {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #FFF8DC;
+}
+div {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-color: #C3FDB8;
+    padding: 10px;
+}
